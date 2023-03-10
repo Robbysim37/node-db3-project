@@ -58,9 +58,9 @@ const validateStep = (req, res, next) => {
   const {instructions,step_number} = req.body
   const err = {status: 400}
 
-  if (scheme_name === undefined || 
-    typeof scheme_name !== "string" ||
-    !scheme_name.trim() ||
+  if (instructions === undefined || 
+    typeof instructions !== "string" ||
+    !instructions.trim() ||
     typeof step_number !== "number" ||
     step_number < 1
   ){
